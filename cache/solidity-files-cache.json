@@ -1,0 +1,43 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/Users/anonymous/Desktop/CTF_Challenge/contracts/Casino.sol": {
+      "lastModificationDate": 1619368184261,
+      "contentHash": "c7a844fe717d2d2be40a405f32da74e8",
+      "sourceName": "contracts/Casino.sol",
+      "solcConfig": {
+        "version": "0.5.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.5.17"
+      ],
+      "artifacts": [
+        "Casino",
+        "ERC20",
+        "Ownable",
+        "SafeMath256",
+        "StandarERC20"
+      ]
+    }
+  }
+}
