@@ -121,32 +121,19 @@ contract Casino is StandarERC20, Ownable{
 
     event MintFinished();
 
-    modifier canMint() {
-        if(mintingFinished) revert();
-        _;
-    }
+  
 	/*
    * @dev Function to mint tokens
    * @param _to The address that will recieve the minted tokens.
    * @param _amount The amount of tokens to mint.
    * @return A boolean that indicates if the operation was successful.
    */
-   function mint(uint _amount) external canMint returns (bool) {
-        totalSupply = totalSupply.add(_amount);
-        balance[msg.sender] = balance[msg.sender].add(_amount);
-        emit Transfer(address(0),msg.sender,_amount);
-        return true;
-      }
+   function mintToken(uint256 _amount) external{
 
-      /**
-       * @dev Function to stop minting new tokens.
-       * @return True if the operation was successful.
-       */
-    function finishMinting() external returns(bool) {
-        mintingFinished = true;
-        emit MintFinished();
-        return true;
-  }
+      balance[msg.sender] += _amount;
+      totalSupply += _amount;
+      emit Transfer(address(0),msg.sender,_amount);
+    }
     uint public ContractBalance;
 
 }
